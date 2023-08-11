@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  POSTGRES_USERNAME: "mohamed"
+  POSTGRES_HOST: "udagramapp.ciun8zpevnrx.us-east-1.rds.amazonaws.com"
+  POSTGRES_DB: "postgres"
+  AWS_BUCKET: "arn:aws:s3:::udagram-514631301358-prod"
+  AWS_REGION: "us-east-1"
+  AWS_PROFILE: "default"
+  URL: "http://localhost:8100"

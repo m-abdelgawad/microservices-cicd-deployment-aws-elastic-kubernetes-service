@@ -1,0 +1,12 @@
+Install:
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+Check Status:
+kubectl get apiservice v1beta1.metrics.k8s.io -o yaml
+
+Ensure that each pod's deployment configuration includes a valid CPU resource request in its resources section:
+resources:
+  requests:
+    cpu: "100m" # CPU request
+  limits:
+    cpu: "200m" # CPU limit
